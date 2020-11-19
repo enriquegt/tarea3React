@@ -14,7 +14,7 @@ class Tweet extends React.Component{
     render(){
         return (
             <div className="tweet-container">
-            <div className="tweet-options-container">
+            <div>
                 <div className="tweet-options" onClick={() => this.props.contextFn.toggleContextMenuFn(this.props.index)}>
                     <DotsHorizontalOutline />
                 </div>
@@ -40,9 +40,9 @@ class Tweet extends React.Component{
                          
                 <div className="score">
                 <div className="icono"> <Icon source={< ChatSolid />}/> 000 </div> <div>  {this.props.interactionCommnets }    </div>
-                <div className="icono"> <Icon source={< ShareSolid />}/> 000 </div> <div> {this.props.interactionRetweets} </div>
-                <div className="icono"> <Icon source={<  CheckCircleSolid/>}/> 000 </div> <div> {this.props.interactionLikes} </div>
-                </div>     
+                <div className="icono" onClick={() => this.props.selectedRetweetsFn(this.props.index)}> <Icon source={< ShareSolid />}/> 000 </div> <div> {this.props.interactionRetweets} </div>
+                <div className="icono" onClick={() => this.props.selectedLikesFn(this.props.index)}> <Icon source={<  CheckCircleSolid/>}/> 000 </div> <div> {this.props.interactionLikes} </div>
+                </div>          
 
             </div>
         )
@@ -50,7 +50,3 @@ class Tweet extends React.Component{
 }
 
 export default Tweet;
-
-// https://hipertextual.com/files/2012/06/twitter-bird-white-on-blue.jpg
-//@TwitterSafety
-//Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut risus et enim sodales congue sed ac ante. Maecenas tincidunt tortor vel lorem semper vestibulum. Phasellus placerat arcu ac dui ultricies, sed tempor dolor rhoncus. Cras id leo sem.
