@@ -1,14 +1,7 @@
 import React from 'react';
 import Icon from '../icon/icon';
 import Logo from '../logo';
-import {
-    HomeSolid,
-    HashtagOutline,
-    BellOutline,
-    MailOutline,
-    UserOutline,
-    DotsCircleHorizontalOutline
-} from "@graywolfai/react-heroicons";
+
 import Account from '../account/account';
 import './styles.css';
 
@@ -18,9 +11,9 @@ const Sidebar = (props) => {
             <Logo/>
             <div className="t-icon-container">
                 {
-                    props.iconList.map( icon => {
+                    props.iconList.map( (icon, index) => {
                         return (
-                            <Icon source={icon} />
+                            <Icon key={index} source={icon} />
                         )
                     })
                 }

@@ -111,7 +111,7 @@ class Feed extends React.Component {
 
                 {
                     this.state.messages.map((messages, index) => {
-                      return <Message 
+                      return <Message key={index}
                         index={index}
                         profile={messages.profile}
                         profileUrl={messages.img}
@@ -126,7 +126,7 @@ class Feed extends React.Component {
                 {
                     this.state.tweets.map( (tweet, index) => {
                         return (
-                            <Tweet
+                            <Tweet key={index}
                                 index={index}
                                 profile={tweet.profile}
                                 profileUrl={tweet.img}

@@ -32,28 +32,26 @@ class searchBar extends React.Component {
                     type="text"
                     className="form-control"
                     id="formGroupExampleInput"
-                    placeholder="Buscar en Tweeter"
                     onChange={this.handleSearch}
                     value={this.state.searchUser}
                 />
-                    <div className="buscar">
+
                     {this.state.users
                   .filter((user) =>
                     user.profile
                       .toLowerCase()
                       .includes(this.state.searchUser.toLowerCase())
                   )
-                  .map((user) => {
-                      return (
-                          
-                        <SearchDropdown 
+                  .map((user, index) => {
+                      return ( 
+                        <SearchDropdown key={index} 
                             profileImg= {user.profileImg}
                             profile= {user.profile}
                             username= {user.username}
                         /> 
                         )
                   })}
-                    </div>
+        
                 </form>
 
             </div>

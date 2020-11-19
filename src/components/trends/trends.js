@@ -18,9 +18,9 @@ class Trends extends React.Component {
             <div className="container">   
                 <h5>"¿Qué está pasando?" </h5>
                 {
-                   this.state.tweets.map( tweet => {
+                   this.state.tweets.map( (tweet, index) => {
                         return (
-                            <News
+                            <News key={index}
                                 title={tweet.category}
                                 content={tweet.title}
                                 numberTweets={tweet.noTweets}

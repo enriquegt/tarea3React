@@ -2,14 +2,9 @@ import React from "react";
 import './styles.css';
 
 class SearchDropdown extends React.Component {
-  constructor() {
-    super();
-}
-
-
+ 
     render() {
-        return (
-            <div className="container">            
+        return (           
                 <div className="tweet-container">
                 <div className="row">  
                     <div className="c1">
@@ -20,8 +15,6 @@ class SearchDropdown extends React.Component {
                         <h6>{this.props.username}</h6>
                     </div>
                 </div>
-                  
-            </div>
             </div>
 
         )
