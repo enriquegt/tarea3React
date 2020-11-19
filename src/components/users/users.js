@@ -9,14 +9,12 @@ class SearchDropdown extends React.Component {
 
     render() {
         return (
-            <div className="tweet-container">
-                <div className="row">
-
+            <div className="container">            
+                <div className="tweet-container">
+                <div className="row">  
                     <div className="c1">
-                    {console.log(this.props.profile)}
                         <img src={this.props.profileImg} alt="profile"/>
                     </div>
-                    
                     <div className="c2">
                         <h6>{this.props.profile}</h6>
                         <h6>{this.props.username}</h6>
@@ -24,6 +22,8 @@ class SearchDropdown extends React.Component {
                 </div>
                   
             </div>
+            </div>
+
         )
     }
  

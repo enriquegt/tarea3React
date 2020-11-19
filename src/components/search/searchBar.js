@@ -44,11 +44,14 @@ class searchBar extends React.Component {
                       .includes(this.state.searchUser.toLowerCase())
                   )
                   .map((user) => {
+                      return (
+                          
                         <SearchDropdown 
                             profileImg= {user.profileImg}
                             profile= {user.profile}
                             username= {user.username}
-                        />
+                        /> 
+                        )
                   })}
                     </div>
                 </form>

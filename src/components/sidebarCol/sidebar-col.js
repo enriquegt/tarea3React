@@ -9,6 +9,7 @@ const SidebarCol = (props) => {
             <SearchBar  />
             <SearchDropdown />
             < Trends />
+            
         </div>
     )
 }
